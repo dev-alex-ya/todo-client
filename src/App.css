@@ -3,3 +3,35 @@
   margin: 0 auto;
 }
 
+.form {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 70%;
+}
+
+.btnAdd {
+  margin-left: 10px;
+  background-color: rgb(175, 255, 95);
+}
+.btnAdd:hover {
+  background-color: rgb(200, 252, 147);
+  
+}
+.btnAdd:active {
+  border: 1px solid rgb(200, 252, 147);
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 300px;
+  }
+}

@@ -35,9 +35,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <form className="" >
+          <form className="form" >
             <input type="text" value={this.state.formText} onChange={this.handleChange} />
-            <button onClick={this.handleAdd}>Добавить</button>
+            <button className="btnAdd" onClick={this.handleAdd}>Добавить</button>
           </form>
           <TodoList todoList={this.state.todoList} />
         </div>
