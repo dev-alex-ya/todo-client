@@ -1,0 +1,12 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 20px 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 5px #ccc;
+}
+  
+  

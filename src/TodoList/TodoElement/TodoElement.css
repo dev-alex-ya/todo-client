@@ -1,0 +1,21 @@
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #eee;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.todo-list li:hover {
+    box-shadow: 0px 0px 7px #ccc;
+    background-color: rgb(231, 244, 255);
+}
+
+button.del:hover {
+    box-shadow: inset 0px 0px 5px rgb(255, 169, 169);
+    text-shadow: 1px 1px 2px white, 0 0 1em red;
+}
