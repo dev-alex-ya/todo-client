@@ -5,7 +5,12 @@ const TodoElement = (props) => {
     return(
         <li>
             <span>{props.text}</span>
-            <button className='del'>Удалить</button>
+            <button 
+                className="del"
+                onClick={props.handleDelete}
+            >
+                Удалить
+            </button>
         </li>
     );
 };
