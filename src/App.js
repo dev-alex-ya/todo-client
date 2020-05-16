@@ -31,6 +31,15 @@ class App extends Component {
     this.setState({formText: e.target.value});
   }
 
+  handleDelete = (index) => {
+    const todoList = [...this.state.todoList];
+
+    todoList.splice(index, 1);
+    this.setState({
+      todoList
+    });
+  }
+
   render(){
     return (
       <div className="App">
@@ -39,7 +48,10 @@ class App extends Component {
             <input type="text" value={this.state.formText} onChange={this.handleChange} />
             <button className="btnAdd" onClick={this.handleAdd}>Добавить</button>
           </form>
-          <TodoList todoList={this.state.todoList} />
+          <TodoList
+            todoList={this.state.todoList}
+            handleDelete={this.handleDelete.bind(this)}
+          />
         </div>
         
       </div>
