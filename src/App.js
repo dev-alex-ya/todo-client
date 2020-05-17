@@ -7,35 +7,35 @@ class App extends Component {
   state = {
     formText: '',
     todoList: [
-      {isChecked: true, text: "Создать стили для этого списка"},
+      {isChecked: false, text: "Создать стили для этого списка"},
       {isChecked: false, text: "Заставить это работать"},
       {isChecked: false, text: "Создать REST API для список дел"},
     ],
-
   }
 
   handleAdd = (e) => {
     e.preventDefault();
-    const newTodo = this.state.formText;
-    const todoList = [...this.state.todoList, {text: newTodo}];
+    
+    const todoList = [...this.state.todoList, {isChecked: false, text: this.state.formText }];
 
     this.setState({
+      formText: '',
       todoList
-    });
-    this.setState({
-      formText: ''
-    });
-  };
+    })
+  }
 
   handleChange = (e) => {
     this.setState({formText: e.target.value});
   }
 
   handlerCheck = (index) => {
+    
     const todoList = this.state.todoList
 
     todoList[index].isChecked = !todoList[index].isChecked
+
     this.setState({todoList})
+    
   }
 
   handleDelete = (index) => {
@@ -56,6 +56,13 @@ class App extends Component {
             <button className="btnAdd" onClick={this.handleAdd}>Добавить</button>
           </form>
           <TodoList
+            isDoneList={false}
+            onChange={this.handlerCheck.bind(this)}
+            todoList={this.state.todoList}
+            handleDelete={this.handleDelete.bind(this)}
+          />
+          <TodoList
+            isDoneList={true}
             onChange={this.handlerCheck.bind(this)}
             todoList={this.state.todoList}
             handleDelete={this.handleDelete.bind(this)}

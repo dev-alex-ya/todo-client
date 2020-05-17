@@ -3,7 +3,6 @@ import classes from './TodoElement.module.css'
 
 const TodoElement = (props) => {
   const cls = [classes.Todo]
-  console.log(props.isChecked);
   
   if (props.isChecked) {
     cls.push(classes.checked)

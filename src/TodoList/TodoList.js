@@ -8,13 +8,15 @@ const TodoList = (props) => {
     {
       props.todoList.map((todo, index) => {
         return (
-          <TodoElement
-            isChecked={todo.isChecked}
-            text={todo.text}
-            key={index}
-            handleCheck={props.onChange.bind(this, index)}
-            handleDelete={props.handleDelete.bind(this, index)}
-          />
+          props.isDoneList === todo.isChecked
+            ? <TodoElement
+                isChecked={todo.isChecked}
+                text={todo.text}
+                key={index}
+                handleCheck={props.onChange.bind(this, index)}
+                handleDelete={props.handleDelete.bind(this, index)}
+              />
+            : null
         )
       })
     }
