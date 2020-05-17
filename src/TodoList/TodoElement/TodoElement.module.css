@@ -1,4 +1,4 @@
-.todo-list li {
+.Todo {
     display: flex;
     justify-content: space-between;
     border: 1px solid #ccc;
@@ -10,7 +10,11 @@
     font-size: 18px;
 }
 
-.todo-list li:hover {
-    box-shadow: 0px 0px 7px #ccc;
-    background-color: rgb(231, 244, 255);
+.Todo:hover {
+    box-shadow: 1px 1px 15px #cec;
+}
+
+.Todo.checked {
+    text-decoration: line-through;
+    color: #777;
 }

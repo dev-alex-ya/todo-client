@@ -1,18 +1,30 @@
-import React from 'react';
-import './TodoElement.css';
+import React from 'react'
+import classes from './TodoElement.module.css'
 
 const TodoElement = (props) => {
-    return(
-        <li>
-            <span>{props.text}</span>
-            <button 
-                className="del"
-                onClick={props.handleDelete}
-            >
-                Удалить
-            </button>
-        </li>
-    );
-};
+  const cls = [classes.Todo]
+  console.log(props.isChecked);
+  
+  if (props.isChecked) {
+    cls.push(classes.checked)
+  }
+  
+  return (
+    <li className={cls.join(' ')}>
+      <input
+        type="checkbox"
+        checked={props.isChecked}
+        onChange={props.handleCheck}
+      />
+      <span>{props.text}</span>
+      <button 
+        className="del"
+        onClick={props.handleDelete}
+      >
+        Удалить
+      </button>
+    </li>
+  )
+}
 
 export default TodoElement;
