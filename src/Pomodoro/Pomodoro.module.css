@@ -1,0 +1,23 @@
+.Pomodoro {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+
+  box-shadow: 0px 1px 5px rgba(100,100,100,1);
+}
+
+.Pomodoro div {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin: 10px;
+}
+
+.Pomodoro button {
+  margin: 5px;
+}
+
+.Pomodoro input {
+  margin: 5px;
+}

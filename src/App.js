@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TodoList from './TodoList/TodoList';
+import Pomodoro from './Pomodoro/Pomodoro'
 
 class App extends Component {
 
@@ -51,6 +52,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
+          <Pomodoro/>
           <form className="form" >
             <input type="text" value={this.state.formText} onChange={this.handleChange} />
             <button className="btnAdd" onClick={this.handleAdd}>Добавить</button>
